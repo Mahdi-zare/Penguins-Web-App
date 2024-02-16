@@ -2,6 +2,10 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+from PIL import Image
+
+# Load your image
+image = Image.open("image.jpeg")
 
 
 st.write("""
@@ -11,6 +15,7 @@ This app predicts the **Palmer Penguin** species!
 
 Data obtained from the [Seaborn datasets](https://github.com/mwaskom/seaborn-data/blob/master/penguins.csv) in Seaborn library.
 """)
+st.image(image,use_column_width=True)
 
 st.sidebar.header("User Input features")
 
